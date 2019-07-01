@@ -6,22 +6,21 @@ public class Triangle {
     //判断是否能构成三角形
     public static int JudgeTriangle(int a, int b, int c) {
         if (a + b > c && a + c > b && b + c > a) {
-            System.out.println("能够构成三角形！");
+            System.out.print("能够构成三角形！");
             return 0;
         } else {
-            System.out.println("不能构成三角形！");
+            System.out.print("不能构成三角形！");
             return -1;
         }
-
     }
 
     //判断是否能构成等腰三角形
     public static int JudgeDTriangle(int a, int b, int c) {
         if (a == b || a == c || b == c) {
             if (a == b && a == c) {
-                System.out.println("该三角形是等边三角形！");
+                System.out.print("该三角形是等边三角形！");
             } else {
-                System.out.println("该三角形是普通的等腰三角形！");
+                System.out.print("该三角形是普通的等腰三角形！");
             }
             return 0;
         } else {
@@ -37,7 +36,7 @@ public class Triangle {
         r2 = a * a + c * c - b * b;
         r3 = b * b + c * c - a * a;
         if (r1 == 0 || r2 == 0 || r3 == 0) {
-            System.out.println("该三角形是直角三角形！");
+            System.out.print("该三角形是直角三角形！");
             return 0;
         } else {
             return -1;
@@ -55,7 +54,7 @@ public class Triangle {
             b = scanner.nextInt();
             c = scanner.nextInt();
         } catch (Exception e) {
-            System.out.println("你输入的不是三个整数！");
+            System.out.print("你输入的不是三个整数！");
             return;
         }
 
@@ -63,7 +62,7 @@ public class Triangle {
 
         //判断输入三边是否合法
         if (a < 0 || a > 200 || b < 0 || b > 200 || c < 0 || c > 200) {
-            System.out.println("你输入的三边不合法！");
+            System.out.print("你输入的三边不合法！");
         }
         //判断是否能构成三角形
         else if (JudgeTriangle(a, b, c) == 0) {
@@ -75,7 +74,7 @@ public class Triangle {
 
         //判断是否一般三角形
         if (rcDT == -1 && rcRT == -1)
-            System.out.println("该三角形是一般三角形！");
+            System.out.print("该三角形是一般三角形！");
 
     }
 }

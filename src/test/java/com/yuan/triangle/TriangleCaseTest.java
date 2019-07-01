@@ -68,8 +68,8 @@ class TriangleCaseTest {
     @ParameterizedTest(name = "{0} {1} {2} {4}")
     @DisplayName("TestCase1: Judge Triangle")
     @CsvSource({
-            "20, 30,  40,  0,   '能够构成三角形！\r\n'",
-            "20, 30,  50,  -1,      '不能构成三角形！\r\n'",
+            "20, 30,  40,  0,   '能够构成三角形！'",
+            "20, 30,  50,  -1,      '不能构成三角形！'",
     })
     void judgeTriangle(int a, int b, int c, int rc, String msg) {
         assertEquals(rc, JudgeTriangle(a, b, c),
@@ -80,8 +80,8 @@ class TriangleCaseTest {
     @ParameterizedTest(name = "{0} {1} {2} {4}")
     @DisplayName("TestCase2: Judge DTriangle")
     @CsvSource({
-            "30, 30,  30,  0,   '该三角形是等边三角形！\r\n'",
-            "20, 30,  30,  0,      '该三角形是普通的等腰三角形！\r\n'",
+            "30, 30,  30,  0,   '该三角形是等边三角形！'",
+            "20, 30,  30,  0,      '该三角形是普通的等腰三角形！'",
             "20, 30,  40,  -1,      ''",
 
     })
@@ -95,7 +95,7 @@ class TriangleCaseTest {
     @ParameterizedTest(name = "{0} {1} {2} {4}")
     @DisplayName("TestCase3: Judge RTriangle")
     @CsvSource({
-            "30, 40,  50,  0,   '该三角形是直角三角形！\r\n'",
+            "30, 40,  50,  0,   '该三角形是直角三角形！'",
             "20, 30,  40,  -1,      ''",
 
     })
@@ -109,16 +109,16 @@ class TriangleCaseTest {
     @ParameterizedTest(name = "{0} {1} {2} {4}")
     @DisplayName("TestCase4: main")
     @CsvSource({
-            "'30 a 10',   '你输入的不是三个整数！\r\n'",
-            "'30 10',   '你输入的不是三个整数！\r\n'",
-            "'30 10 1.1',   '你输入的不是三个整数！\r\n'",
+            "'30 a 10',   '你输入的不是三个整数！'",
+            "'30 10',   '你输入的不是三个整数！'",
+            "'30 10 1.1',   '你输入的不是三个整数！'",
 
-            "'30 20 201',   '你输入的三边不合法！\r\n'",
-            "'20 30 40',   '能够构成三角形！\r\n该三角形是一般三角形！\r\n'",
-            "'20 20 20',   '能够构成三角形！\r\n该三角形是等边三角形！\r\n'",
+            "'30 20 201',   '你输入的三边不合法！'",
+            "'20 30 40',   '能够构成三角形！该三角形是一般三角形！'",
+            "'20 20 20',   '能够构成三角形！该三角形是等边三角形！'",
     })
     void main(String input, String msg) {
-        final String prompt = "请输入三角形的三边: \r\n";
+        final String prompt = "请输入三角形的三边: ";
 
         provideInput(input);
 
